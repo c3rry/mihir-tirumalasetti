@@ -3,25 +3,115 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF7F0;
+  --foreground: #111317;
+  --paper-tint: #F3EFE6;
+  --nyt-rule: #1A1D24;
+  --nyt-muted: #525866;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0D0F14;
+  --foreground: #F0F2F6;
+  --paper-tint: #161A22;
+  --nyt-rule: #2D3442;
+  --nyt-muted: #9CA3AF;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Authentic NYT Double Rules */
+.border-nyt-double {
+  border-top: 3px double currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.border-nyt-double-bottom {
+  border-bottom: 4px double currentColor;
+}
+
+.border-nyt-double-top {
+  border-top: 4px double currentColor;
+}
+
+/* Editorial Drop Caps */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-headline), 'Playfair Display', Georgia, serif;
+  font-size: 3.75rem;
+  line-height: 0.8;
+  padding-top: 0.25rem;
+  padding-right: 0.65rem;
+  padding-bottom: 0.1rem;
+  font-weight: 700;
+  color: currentColor;
+}
+
+/* Broadsheet Column Dividers */
+@media (min-width: 768px) {
+  .newspaper-columns {
+    column-count: 2;
+    column-gap: 2.5rem;
+    column-rule: 1px solid rgba(120, 120, 120, 0.25);
   }
+}
+
+@media (min-width: 1024px) {
+  .newspaper-columns-3 {
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: 1px solid rgba(120, 120, 120, 0.25);
+  }
+}
+
+/* Subtle newspaper ink texture */
+.newsprint-texture {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .newsprint-texture {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth selection */
+::selection {
+  background-color: #fde047;
+  color: #000000;
+}
+
+.dark ::selection {
+  background-color: #6366f1;
+  color: #ffffff;
 }
