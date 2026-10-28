@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Tirumalasetti Chronicle 🗞️
 
-## Getting Started
+> **"All The Data Fit To Compute"**  
+> Personal Portfolio and Research Dispatch of **Mihir Tirumalasetti** — Data Scientist & Machine Learning Engineer specializing in enterprise credit decisioning, 3D neuroanatomical connectomics, and autonomous multimodal systems.
 
-First, run the development server:
+Built with a **colorful New York Times editorial broadsheet aesthetic**, seamless dark mode ("Morning Broadsheet" ☀️ vs. "Evening Broadside" 🌙), interactive career timeline, and an investigative project catalog.
 
+---
+
+## 🏛️ Editorial & Architectural Highlights
+
+- **The New York Times Aesthetic**:
+  - Classic broadsheet masthead with volume, late research edition markings, and live data science market ticker.
+  - Authentic double-line borders (`border-nyt-double`), hairline column rules, and editorial drop caps.
+  - Editorial color palette: Financial Amber, Neural Indigo, Laboratory Emerald, Autonomous AI Violet, and Breaking Red.
+  - Dual-mode newsprint: Paper Parchment (`#FAF7F0`) for Morning Broadsheet and Deep Obsidian (`#0D0F14`) for Evening Broadside.
+- **Career Timeline (10 Dispatches)**:
+  - Interactive chronological timeline featuring positions at **Ally Financial**, **UT Dallas Ganglia Guardian Lab**, **UT Southwestern Medical Center**, **Sports Analytics Club**, **Artificial Intelligence Society (AIS)**, and **SOFAB**.
+  - Category filtering (Enterprise & FinTech, Academic Research, Leadership & Governance, Mentorship).
+  - Search filter by keyword, tool, or metric.
+- **Investigative Projects Archive (8 Reports)**:
+  - Feature articles for **AxonAtlas2**, **Parkinson's Behavioral Clusters ML Framework** (Jindal Award Winner), **UTSW BioDesign IoT Telemetry**, **AIS-sponsor** (Gemini Autonomous Agent), **MagentaMonitor** (HackUTD), **GuardianVision2**, **DeepClean**, and **SceneFusion**.
+  - Modal technical dossiers with methodology, architecture breakdown, and verified outputs.
+- **Scientific Spotlight**:
+  - Focus on forthcoming visual connectome paper co-authored with researchers from the **Allen Institute for Neural Dynamics** and **Columbia University**.
+- **Interactive Technical Arsenal**:
+  - 42 indexed tools, algorithms, and libraries across Machine Learning, Computer Vision, Data Systems, and Languages with one-click copy.
+- **Blazing Fast Performance**:
+  - 100% statically pre-rendered with zero runtime latency, optimized for instantaneous Vercel delivery.
+
+---
+
+## 🚀 One-Click Deploy to Vercel
+
+This repository is pre-configured for zero-configuration deployment to [Vercel](https://vercel.com/):
+
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Import the GitHub repository: `c3rry/mihir-tirumalasetti`.
+3. Framework Preset: **Next.js** (automatically detected).
+4. Click **Deploy**.
+
+Vercel will automatically build the static pages and deploy the application globally on its Edge Network.
+
+---
+
+## 🛠️ Local Development
+
+### Prerequisites
+- Node.js (v18.17+ or v20+)
+- npm / yarn / pnpm
+
+### Setup
 ```bash
+# Clone the repository
+git clone https://github.com/c3rry/mihir-tirumalasetti.git
+cd mihir-tirumalasetti
+
+# Install dependencies
+npm install
+
+# Run the local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the broadsheet in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🗂️ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+mihir-tirumalasetti/
+├── src/
+│   ├── app/
+│   │   ├── globals.css         # Broadsheet styles, double rules, drop caps & textures
+│   │   ├── layout.tsx          # Google Fonts (Playfair Display, Lora, JetBrains Mono, Inter)
+│   │   └── page.tsx            # Main Broadsheet Page assembly
+│   ├── components/
+│   │   ├── BroadsheetHeader.tsx    # Broadsheet masthead, ticker, weather & theme switcher
+│   │   ├── EditorialFooter.tsx     # Letter to the editor dispatch desk & colophon
+│   │   ├── ExperienceTimeline.tsx  # Chronological timeline with datelines & category filters
+│   │   ├── FrontPageLead.tsx       # Lead article, drop cap, pull quotes & key indicators
+│   │   ├── ProjectModal.tsx        # Special investigative report deep-dive modal
+│   │   ├── ProjectsSection.tsx     # Feature story grid with search & category filters
+│   │   ├── ResearchSpotlight.tsx   # Ganglia Guardian Lab, Allen Inst., Jindal Award & UTSW
+│   │   ├── SkillsLedger.tsx        # 4-quadrant technical commodities ledger
+│   │   ├── SocialIcons.tsx         # Inline crisp SVG icons for GitHub & LinkedIn
+│   │   └── ThemeContext.tsx        # Morning/Evening theme context with localStorage sync
+│   └── data/
+│       └── resume.ts           # Structured data model for all 10 positions & 8 projects
+├── tailwind.config.ts          # Custom NYT colors, fonts, and dark mode class
+├── package.json
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 Published Record & Contact
 
-## Deploy on Vercel
+- **Author**: Mihir Tirumalasetti
+- **LinkedIn**: [linkedin.com/in/mihir-tirumalasetti](https://www.linkedin.com/in/mihir-tirumalasetti/)
+- **GitHub**: [github.com/c3rry](https://github.com/c3rry)
+- **Ganglia Guardian Lab**: [labs.utdallas.edu/ganglia-guardian-lab](https://labs.utdallas.edu/ganglia-guardian-lab/)
+- **EPICS UTSW Project**: [epics.utdallas.edu](https://epics.utdallas.edu/)
+- **SOFAB Governance**: [soc.utdallas.edu/for-organizations](https://soc.utdallas.edu/for-organizations/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Typeset in Playfair Display, Lora, JetBrains Mono, and Inter.*
